@@ -77,7 +77,10 @@ Transform travel planning from a chore into an exciting journey by providing use
 - **🌙 Dark Mode** support
 - **♿ Accessibility** with WCAG 2.1 compliance
 
-![alt text](<workflow.jpeg>)
+---
+### 👤 User Flow Diagram
+<img width="1536" height="1024" alt="user flow diagram" src="https://github.com/user-attachments/assets/2ff96b4d-c664-4711-b9db-80cecea1f1d5" />
+
 ---
 
 ## 🛠️ Tech Stack
