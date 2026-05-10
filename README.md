@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://img.icons8.com/color/96/000000/airplane-take-off.png" alt="Traveloop Logo" width="96" height="96">
+  <video src="./landingpage.mp4" width="100%" autoplay loop muted playsinline></video>
   
   # Traveloop
   
