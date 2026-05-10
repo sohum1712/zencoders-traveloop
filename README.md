@@ -1,7 +1,5 @@
 <div align="center">
-  <video width="100%" autoplay loop muted playsinline>
-    <source src="https://github.com/sohum1712/zencoders-traveloop/raw/main/landingpage.mp4" type="video/mp4">
-  </video>
+  <video src="landingpage.mp4" width="100%" autoplay loop muted playsinline></video>
   
   # Traveloop
   
