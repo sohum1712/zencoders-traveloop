@@ -134,6 +134,7 @@ Transform travel planning from a chore into an exciting journey by providing use
 ---
 
 ## 🏗️ Architecture Overview
+![alt text](<Production Level System Architecture.jpeg>)
 
 ### Modular Architecture
 Traveloop follows a **feature-based modular architecture** where each feature (auth, trips, itinerary, etc.) is completely self-contained with its own controllers, services, repositories, and DTOs.
@@ -240,7 +241,8 @@ traveloop/
 
 ## 🗄️ Database Design
 
-### ER Overview
+## ER Overview
+![alt text](mermaid-diagram.png)
 Traveloop uses a **normalized relational database** with PostgreSQL to ensure data integrity and scalability. The design follows **Third Normal Form (3NF)** with proper relationships and constraints.
 
 ### Core Relationships
