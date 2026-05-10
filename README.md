@@ -77,6 +77,7 @@ Transform travel planning from a chore into an exciting journey by providing use
 - **🌙 Dark Mode** support
 - **♿ Accessibility** with WCAG 2.1 compliance
 
+![alt text](<workflow.jpeg>)
 ---
 
 ## 🛠️ Tech Stack
@@ -134,7 +135,7 @@ Transform travel planning from a chore into an exciting journey by providing use
 ---
 
 ## 🏗️ Architecture Overview
-![alt text](<Production Level System Architecture.jpeg>)
+![alt text](<systecm architechture.png>)
 
 ### Modular Architecture
 Traveloop follows a **feature-based modular architecture** where each feature (auth, trips, itinerary, etc.) is completely self-contained with its own controllers, services, repositories, and DTOs.
