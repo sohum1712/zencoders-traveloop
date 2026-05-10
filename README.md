@@ -673,10 +673,10 @@ npx prisma db seed
 ## 👨‍💻 Contributors
 
 ### Core Team
-- **[Your Name](https://github.com/yourusername)** - Lead Developer & Architect
-- **[Team Member](https://github.com/teammember)** - Frontend Specialist
-- **[Team Member](https://github.com/teammember)** - Backend Engineer
-- **[Team Member](https://github.com/teammember)** - UI/UX Designer
+- **Soham** 
+- **Vaishnav** 
+- **Dharma Teja** 
+- **Kumara Swamy** 
 
 ### How to Contribute
 1. Fork the repository
