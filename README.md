@@ -1,5 +1,8 @@
 <div align="center">
-  <video src="landingpage.mp4" width="100%" autoplay loop muted playsinline></video>
+ 
+https://github.com/user-attachments/assets/fc333611-9114-4f92-9009-a461e0e596a1
+
+
   
   # Traveloop
   
