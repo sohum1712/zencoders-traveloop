@@ -63,7 +63,7 @@ Transform travel planning from a chore into an exciting journey by providing use
 - **📋 Document Storage** for travel documents
 - **🌐 Offline Access** for essential information
 
-### 🤖 AI-Powered Features
+### 🤖 Optional AI Enhancements
 - **🧠 Smart Itinerary Generation** based on preferences
 - **💡 Activity Recommendations** using ML insights
 - **🎨 Personalized Suggestions** from travel history
@@ -148,7 +148,8 @@ src/modules/
 ├── budget/        # Budget calculations
 ├── notes/         # Trip notes
 ├── packing/       # Packing checklists
-└── ai/           # AI-powered features
+├── community/     # Community & Collaboration Module
+└── ai/           # AI-powered features (optional)
 ```
 
 ### Repository Pattern
@@ -160,11 +161,13 @@ We implement the **Repository Pattern** to abstract database operations:
 
 ### DTO Validation Flow
 ```
-Request → DTO Validation → Service → Repository → Database
-    ↓           ↓              ↓           ↓          ↓
-  Parse     Zod Schema    Business    Prisma    PostgreSQL
-  Input     Validation    Logic       ORM       Storage
+Request → Validation middleware → Authentication middleware → Security layer → DTO Validation → Service → Repository → Database
+    ↓           ↓              ↓              ↓           ↓              ↓           ↓          ↓          ↓
+  Parse     Security       JWT Token      HTTP Only   Zod Schema    Business    Prisma    PostgreSQL
+  Input     Checks         Validation     Cookies     Validation    Logic       ORM       Storage
 ```
+
+*All requests pass through multiple layers of validation and security before reaching the database.*
 
 ### API Versioning
 All APIs are versioned for backward compatibility:
@@ -444,38 +447,47 @@ CREATE INDEX idx_activities_popular ON activities(is_popular);
 
 ---
 
-## 🤖 AI Features
+## 🤖 Optional AI Enhancements
 
-### Smart Itinerary Generation
-Our AI-powered itinerary generator creates personalized travel plans based on:
+### Smart Itinerary Generation (Future Enhancement)
+Our AI-powered itinerary generator will create personalized travel plans based on:
 - **User Preferences**: Interests, budget, travel style
 - **Destination Context**: Local attractions, weather, events
 - **Time Constraints**: Duration, optimal scheduling
 - **Budget Optimization**: Cost-effective recommendations
 
-### Prompt Engineering Strategy
-```typescript
-const promptTemplate = `
-Generate a ${duration}-day itinerary for ${destination}.
-Budget: $${budget}
-Interests: ${interests.join(', ')}
-Travel style: ${travelStyle}
+*Note: AI features are planned for future releases and will be optional enhancements.*
 
-Requirements:
-- Maximum ${activitiesPerDay} activities per day
-- Mix of free and paid activities
-- Include estimated costs and durations
-- Consider travel time between locations
 
-Return structured JSON with activities, costs, and scheduling.
-`;
-```
 
-### Fallback Handling
+### Fallback Handling (Future Implementation)
 - **Graceful Degradation**: Template-based fallbacks if AI fails
 - **Caching**: Store successful AI responses for similar requests
 - **Cost Optimization**: Efficient API usage with request batching
 - **Error Recovery**: Multiple fallback strategies for reliability
+
+*AI features will be implemented as optional modules in future iterations.*
+
+---
+
+## 🌐 External APIs
+
+Traveloop integrates with several external services to enhance the travel planning experience:
+
+### Weather & Location Services
+- **OpenWeather API**: Real-time weather data and forecasts for destination planning
+- **Google Maps API**: Geocoding, places search, and mapping functionality
+
+### Financial Services
+- **Currency Exchange API**: Real-time currency conversion for budget planning
+- **Payment Processing**: Stripe integration for future premium features
+
+### Travel Data APIs
+- **Amadeus API**: Flight and hotel data integration
+- **Skyscanner API**: Price comparison and booking data
+- **TripAdvisor API**: Reviews and ratings for activities and destinations
+
+*All external API integrations are optional and can be enabled/disabled based on business requirements.*
 
 ---
 
@@ -582,7 +594,7 @@ VITE_API_URL="http://localhost:3001"
 VITE_APP_URL="http://localhost:5173"
 
 # Analytics (optional)
-NEXT_PUBLIC_GA_ID="your-google-analytics-id"
+VITE_GA_ID="your-google-analytics-id"
 ```
 
 ---
